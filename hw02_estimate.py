@@ -8,7 +8,7 @@ VAT_RATE = 0.10
 @app.post("/estimate")
 def estimate_price():
     """
-    요청(JSON):ㅋ
+    요청(JSON):ㅋzzd
       - price: 단가 (숫자, 필수)
       - quantity: 수량 (정수, 기본 1)
 
