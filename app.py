@@ -70,7 +70,7 @@ def customers_route():
 @app.get("/products")
 def products_route():
     """
-    상품 조회/검색
+    상품 조회/검색ㅋ
     - 전체: /products
     - 키워드: /products?q=키워드
     - (선택) 단건: /products?id=101
