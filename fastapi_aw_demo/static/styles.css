@@ -1,0 +1,13 @@
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0b0f19;color:#e5e7eb;margin:0}
+.container{max-width:1100px;margin:40px auto;padding:0 16px}
+h1{font-size:28px;margin:0 0 12px}
+.subtitle{color:#9ca3af;margin-bottom:24px}
+.table{width:100%;border-collapse:separate;border-spacing:0 10px}
+.table thead th{color:#9ca3af;text-align:left;font-weight:600;padding:8px 12px}
+.row{background:#111827;border:1px solid #1f2937;border-radius:14px;overflow:hidden}
+.cell{padding:14px 16px;vertical-align:top}
+.badge{display:inline-block;padding:4px 10px;border:1px solid #374151;border-radius:999px;color:#cbd5e1;font-size:12px;margin-right:6px}
+.title{font-size:16px;color:#e5e7eb;font-weight:700}
+.emoji{font-size:20px;margin-right:8px}
+.footer{margin-top:28px;color:#9ca3af;font-size:12px}
+a{color:#93c5fd}

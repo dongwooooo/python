@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>예측 모형 – AdventureWorks</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>6. 예측 모형</h1>
+    <p class="subtitle">AdventureWorks 데이터를 이용해 제공하는 FastAPI 기반 부가가치 서비스</p>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="width:28%">예측 과제</th>
+          <th>설명</th>
+          <th style="width:28%">사용 가능한 타깃 변수</th>
+          <th style="width:16%">사용 테이블</th>
+        </tr>
+      </thead>
+      <tbody id="model-rows"></tbody>
+    </table>
+
+    <div class="footer">
+      API 문서: <a href="/docs">/docs</a> · JSON 목록: <a href="/models">/models</a>
+    </div>
+  </div>
+
+  <script>
+    fetch('/models').then(r=>r.json()).then(data=>{
+      const tbody = document.getElementById('model-rows');
+      data.forEach(m=>{
+        const tr = document.createElement('tr');
+        tr.className = 'row';
+        tr.innerHTML = `
+          <td class="cell"><div class="title"><span class="emoji">${m.emoji}</span>${m.name}</div></td>
+          <td class="cell">${m.desc}</td>
+          <td class="cell">${m.target_vars.map(v=>'<span class="badge">'+v+'</span>').join('')}</td>
+          <td class="cell">${m.tables.map(v=>'<span class="badge">'+v+'</span>').join('')}</td>`;
+        tbody.appendChild(tr);
+      });
+    });
+  </script>
+</body>
+</html>
